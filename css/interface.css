@@ -26,4 +26,7 @@ h4 {
   font-family: open sans;
 }
 
+.btn.btn-Add {background-color:#00abd2; color:#fff; width:100px;}
+.btn.btn-Save {background-color:#f0917d; color:#fff; width:200px;}
+
 .panel-body {padding:0px;}

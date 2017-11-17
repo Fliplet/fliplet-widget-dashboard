@@ -2,16 +2,16 @@
 
   {{#each this}}
     <h4>{{@key}}</h4>
-    <div class="panel-Item workflow-list-wrapper" id="{{@key}}" role="tablist" aria-multiselectable="true">
+    <div class="panel-Item workflow-list-wrapper" id="workflow_{{this.id}}" role="tablist" aria-multiselectable="true">
       {{#each items}}
         <div class="panel panel-Item">
-          <div role="tab" id="headingItemone">
-            <h5 class="panel-Itemheading panel-Itemtitle collapsed" role="button" data-toggle="collapse" href="#collapseItemone">
+          <div role="tab" id="headingItem{{ID}}">
+            <h5 class="panel-Item heading panel-Itemtitle collapsed" role="button" data-toggle="collapse" href="#collapseItem{{ID}}">
               {{[Item Title]}}
             </h5>
           </div>
 
-          <div id="collapseItemone" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingItemone">
+          <div id="collapseItem{{ID}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingItem{{ID}}">
             <div class="panel-body animated fadeIn" style="color:#555;border-top:0px">
               <p> {{[Item Description]}} </p>
             </div>
@@ -19,5 +19,8 @@
         </div>
       {{/each}}
     </div>
+    <p>
+      <button class="btn btn-Add" type="submit">Edit Workflow</button>
+    </p>
   {{/each}}
 </div>
