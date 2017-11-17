@@ -1,3 +1,6 @@
+var userIsAdmin,
+  workflowEntries;
+
 /**
  * Based on the the list of workflow entries it creates a list of workflows
  * @param entries list of workflow entries
@@ -27,13 +30,19 @@ function displayWorkFlows(workFlows) {
   $('.workflow-list-wrapper').html(html);
   return Promise.resolve();
 }
-Fliplet.DataSources.connect(31, {
+
+
+Fliplet.DataSources.connect(998, {
   offline: false
 }).then(function (connection) {
   return connection.find();
 }).then(function (entries) {
-  console.log(entries);
-  return getWorkflows(entries);
+  workflowEntries = entries;
+  return Fliplet.API.request('v1/user');
+}).then(function (user) {
+  console.log(user);
+  userIsAdmin = user.isAdmin;
+  return getWorkflows(workflowEntries);
 }).then(function (workFlows) {
   return displayWorkFlows(workFlows);
 });

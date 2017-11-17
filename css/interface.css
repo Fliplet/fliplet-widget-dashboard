@@ -26,6 +26,43 @@ h4 {
   font-family: open sans;
 }
 
+.panel-Item h5.collapsed:after {
+  right:15px;
+
+  content: "\e259";
+  color: #1d3f68;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  -ms-transform: rotate(0deg);
+  /* IE 9 */
+  -webkit-transform: rotate(0deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+.panel-Item h5:after {
+  right:15px;
+
+  position: absolute;
+
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-size: 14px;
+  line-height: 37px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e259";
+  color: #1d3f68;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -ms-transform: rotate(-180deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-180deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(-180deg);
+}
+
+
 .btn.btn-Add {background-color:#00abd2; color:#fff; width:100px;}
 .btn.btn-Save {background-color:#f0917d; color:#fff; width:200px;}
 
