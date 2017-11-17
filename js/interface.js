@@ -1,3 +1,7 @@
+$('[data-admin]').on('click', function() {
+  $('.admin-tab').show();
+});
+
 var userIsAdmin,
   workflowEntries;
 
