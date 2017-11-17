@@ -12,6 +12,7 @@
       "fliplet-datasources",
       "handlebars",
       "jquery",
+      "jquery-ui",
       "bootstrap"
     ],
     "assets": [
