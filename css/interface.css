@@ -77,10 +77,13 @@ h4 {
   background-color:#f0917d;
   color:#fff;
   width:200px;
+  margin-top: 30px;
 }
 
 .workflow-wrapper {
   margin-top: 30px;
 }
 
-.panel-body {padding:0px;}
+.panel-body {
+  padding:0px;
+}
