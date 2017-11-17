@@ -7,16 +7,14 @@
   "provider_only": true,
   "interface": {
     "dependencies": [
-      "fliplet-media",
       "fliplet-studio-ui",
-      "fliplet-datasources"
+      "fliplet-datasources",
+      "handlebars"
     ],
     "assets": [
-      "vendor/handlebars.js",
-      "vendor/tether.min.js",
-      "vendor/moment.js",
       "js/interface.js",
-      "css/interface.css"
+      "css/interface.css",
+      "js/interface.templates.js"
     ]
   },
   "build": {

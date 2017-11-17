@@ -4,8 +4,15 @@
  * @returns {Promise.<T>}
  */
 function getWorkflows(entries) {
+  var workflows = {};
+  entries.forEach(function(entry) {
+    if (!workflows[entry.data.Workflow]) {
+      workflows[entry.data.Workflow] = { items: []}
+    }
+    workflows[entry.data.Workflow].items.push(entry.data);
+  });
 
-  return Promise.resolve(entries);
+  return workflows
 }
 
 /**
@@ -14,11 +21,8 @@ function getWorkflows(entries) {
  * @returns {Promise.<T>}
  */
 function displayWorkFlows(workFlows) {
-  var templateHtml = $('template[name="workflow-dashboard-list"]').html(),
-    workFlowTemplate = Handlebars.compile(templateHtml);
-
-  $('.workflows-content').html(workFlowTemplate(workFlows));
-
+  var tpl = Fliplet.Widget.Templates['templates.list'];
+  var html = tpl(workflows);
   return Promise.resolve();
 }
 
