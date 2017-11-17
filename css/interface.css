@@ -69,13 +69,14 @@ h4 {
 .btn.btn-Add {background-color:#00abd2;
   color:#fff;
   width:100px;
-  height: 40px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 12px;
 }
 .btn.btn-Save {
   background-color:#f0917d;
   color:#fff;
   width:200px;
-  height: 40px;
 }
 
 .panel-body {padding:0px;}
