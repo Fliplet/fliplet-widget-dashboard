@@ -1,6 +1,6 @@
 {
-  "name": "Dashboard",
-  "package": "com.fliplet.dashboard",
+  "name": "Workflow dashboard",
+  "package": "com.fliplet.workflows",
   "version": "1.0.0",
   "icon": "img/icon.png",
   "tags": ["type:component", "category:general"],
