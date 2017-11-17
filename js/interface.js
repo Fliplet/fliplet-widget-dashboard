@@ -10,7 +10,7 @@ function getWorkflows(entries) {
   var workflows = {};
   entries.forEach(function(entry) {
     if (!workflows[entry.data.Workflow]) {
-      workflows[entry.data.Workflow] = { id: entry.id, items: []};
+      workflows[entry.data.Workflow] = { id: entry.id, userIsAdmin: userIsAdmin, items: []};
     }
     workflows[entry.data.Workflow].items.push(entry.data);
   });
@@ -39,11 +39,15 @@ Fliplet.DataSources.connect(998, {
 }).then(function (entries) {
   workflowEntries = entries;
   return Fliplet.API.request('v1/user');
-}).then(function (user) {
-  console.log(user);
-  userIsAdmin = user.isAdmin;
+}).then(function (userData) {
+  console.log(userData);
+  userIsAdmin = userData.user.isAdmin;
   return getWorkflows(workflowEntries);
 }).then(function (workFlows) {
   return displayWorkFlows(workFlows);
+}).then(function () {
+  if (userIsAdmin) {
+    $('.btn-add-workflow-wrapper').removeClass('hidden');
+  }
 });
 

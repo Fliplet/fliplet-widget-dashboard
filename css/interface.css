@@ -62,8 +62,20 @@ h4 {
   transform: rotate(-180deg);
 }
 
+.workflow-list-wrapper {
+  margin-top: 20px;
+}
 
-.btn.btn-Add {background-color:#00abd2; color:#fff; width:100px;}
-.btn.btn-Save {background-color:#f0917d; color:#fff; width:200px;}
+.btn.btn-Add {background-color:#00abd2;
+  color:#fff;
+  width:100px;
+  height: 40px;
+}
+.btn.btn-Save {
+  background-color:#f0917d;
+  color:#fff;
+  width:200px;
+  height: 40px;
+}
 
 .panel-body {padding:0px;}

@@ -19,8 +19,11 @@
         </div>
       {{/each}}
     </div>
-    <p>
-      <button class="btn btn-Add" type="submit">Edit</button>
-    </p>
+
+    {{#if userIsAdmin}}
+      <p>
+        <button class="btn btn-Add" type="submit">Edit</button>
+      </p>
+    {{/if}}
   {{/each}}
 </div>
