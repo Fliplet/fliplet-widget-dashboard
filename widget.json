@@ -7,9 +7,12 @@
   "provider_only": true,
   "interface": {
     "dependencies": [
+      "fliplet-core",
       "fliplet-studio-ui",
       "fliplet-datasources",
-      "handlebars"
+      "handlebars",
+      "jquery",
+      "bootstrap"
     ],
     "assets": [
       "js/interface.js",
