@@ -7,12 +7,12 @@ function getWorkflows(entries) {
   var workflows = {};
   entries.forEach(function(entry) {
     if (!workflows[entry.data.Workflow]) {
-      workflows[entry.data.Workflow] = { items: []}
+      workflows[entry.data.Workflow] = { items: []};
     }
     workflows[entry.data.Workflow].items.push(entry.data);
   });
 
-  return workflows
+  return workflows;
 }
 
 /**
@@ -22,11 +22,12 @@ function getWorkflows(entries) {
  */
 function displayWorkFlows(workFlows) {
   var tpl = Fliplet.Widget.Templates['templates.list'];
-  var html = tpl(workflows);
+  var html = tpl(workFlows);
+  console.log(workFlows);
+  $('.workflow-list-wrapper').html(html);
   return Promise.resolve();
 }
-
-Fliplet.DataSources.connect(998, {
+Fliplet.DataSources.connect(31, {
   offline: false
 }).then(function (connection) {
   return connection.find();

@@ -1,7 +1,20 @@
 <div class="workflow-list">
-  <h3>{{title}}</h3>
-  {{#each item}}
-    <a>{{title}}</a>
-    <p>{{description}}</p>
+  {{#each this}}
+    <h3>{{@key}}</h3>
+    {{#each items}}
+      <div class="panel panel-Item">
+        <div role="tab" id="headingItemone">
+          <h5 class="panel-Itemheading panel-Itemtitle collapsed" role="button" data-toggle="collapse" href="#collapseItemone">
+            {{[Item Title]}}
+          </h5>
+        </div>
+
+        <div id="collapseItemone" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingItemone">
+          <div class="panel-body animated fadeIn" style="color:#555;border-top:0px">
+            <p> {{[Item Description]}} </p>
+          </div>
+        </div>
+      </div>
+    {{/each}}
   {{/each}}
 </div>
