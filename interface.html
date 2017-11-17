@@ -1,11 +1,60 @@
-<div class="file-manager-wrapper">
+<div class="workflow-dashboard-wrapper">
 
   <div class="progress hidden">
     <div class="progress-bar progress-bar-striped active" role="progressbar" style="width: 0%"></div>
   </div>
 
-  <div class="file-manager-header">
-    <h1><i class="fa fa-folder" aria-hidden="true"></i> Fliplet Dashboard</h1>
-  </div>
 
- </div>
+
+
+  <div class="col-xs-12 workflow-dashboard-header">
+    <h1><i class="fa fa-folder" aria-hidden="true"></i> Fliplet Dashboard</h1>
+
+
+
+    <div clas="col-xs-12" style="background-color:#e5e5e5;height:300px">
+      <h2 style="text-align:center">
+        Guidance Box
+      </h2>
+      <div class="workflows-content"></div>
+    </div>
+
+
+
+
+
+    <div class="col-xs-9"style="background-color:#b5b5b5;">
+      <h3>What are your plans for today?</h3>
+      <ul>
+        <li>jfhkfhkdjhf</li>
+        <li>jfhkfhkdjhf</li>
+        <li>jfhkfhkdjhf</li>
+      </ul>
+    </div>
+
+    <div class="col-xs-3">
+      <h3>Resources</h3>
+      <p>
+        Latest CS
+      </p>
+      <p>
+        Kayako
+      </p>
+      <h3>Blog</h3>
+    </div>
+  </div>
+  <div>
+
+
+  </div>
+</div>
+
+<template name="workflow-dashboard-list">
+  <div class="workflow-list">
+    <h3>{{title}}</h3>
+    {{#each item}}
+     <a>{{title}}</a>
+     <p>{{description}}</p>
+    {{/each}}
+  </div>
+</template>
