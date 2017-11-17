@@ -7,7 +7,7 @@ function getWorkflows(entries) {
   var workflows = {};
   entries.forEach(function(entry) {
     if (!workflows[entry.data.Workflow]) {
-      workflows[entry.data.Workflow] = { items: []};
+      workflows[entry.data.Workflow] = { id: entry.id, items: []};
     }
     workflows[entry.data.Workflow].items.push(entry.data);
   });
